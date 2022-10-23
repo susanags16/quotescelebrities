@@ -1,5 +1,6 @@
 package com.example.quotescelebrities.data.local.daos
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -29,5 +30,11 @@ interface QuoteDao {
 
     @Query("DELETE FROM quote WHERE id=:quoteId ")
     suspend fun delete(quoteId: Int)
+
+    @Query("SELECT * FROM quote ORDER BY id ASC")
+    fun readAllData(): LiveData<List<QuoteEntity>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun addQuote(quote: QuoteEntity)
 
 }

@@ -1,13 +1,14 @@
 package com.example.quotescelebrities.presentation.View
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.quotescelebrities.databinding.ActivityQuoteRandomBinding
 import com.example.quotescelebrities.presentation.View_Model.QuoteRandomViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+
 
 @AndroidEntryPoint
 class QuoteRandomActivity : AppCompatActivity() {

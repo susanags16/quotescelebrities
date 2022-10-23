@@ -1,19 +1,17 @@
-package com.example.quotescelebrities.presentation.view
+package com.example.quotescelebrities.presentation.View
 
 import android.content.Intent
 import android.content.res.Configuration
-import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.RelativeLayout
-import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.quotescelebrities.R
+import com.example.quotescelebrities.presentation.view.AddQuoteActivity
+import com.example.quotescelebrities.presentation.view.LIstQuoteActivity
 import com.google.android.material.navigation.NavigationView
-
 
 
 class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -48,7 +46,7 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         val addQuote: Intent = Intent(this, AddQuoteActivity::class.java)
         val quoteList: Intent = Intent(this, LIstQuoteActivity::class.java)
         when (item.itemId) {
-            // R.id.nav_item_one -> startActivity(citasView)
+            //R.id.nav_item_one -> startActivity(citasView)
             R.id.nav_item_two -> startActivity(addQuote)
             R.id.nav_item_three -> startActivity(quoteList)
         }

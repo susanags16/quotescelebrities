@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-
+import com.example.quotescelebrities.databinding.ActivityListQuoteBinding
+import com.example.quotescelebrities.presentation.view_model.QuoteViewModel
 
 class LIstQuoteActivity : AppCompatActivity() {
 
